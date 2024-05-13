@@ -12,6 +12,8 @@ int main() {
         }
         return 0;
     }
+    cout << fixed;
+    cout.precision(9);
     cout << - (x / (y - 1)) << endl;
     return 0;
 }
