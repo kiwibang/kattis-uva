@@ -31,8 +31,6 @@ int main() {
             if (line[2] != 'o') {
                 ++diff2;
             }
-            cout << "diff 1 " << diff1 << endl;
-            cout << "diff 2 " << diff2 << endl; 
             if (diff1 <= 1 && (line.find('o') == 0 || line.find('n') == 1 || line.find('e') == 2)) {
                 cout << 1 << endl;
             } else {
