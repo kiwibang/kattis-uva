@@ -21,12 +21,12 @@ int main() {
     while (true) {
         // check out of bounds
         if (x < 0 || x >= r || y < 0 || y >= c) {
-            cout << "Out." << endl;
+            cout << "Out" << endl;
             return 0;
         }
         // check lost
         if (count > r * c * 2) {
-            cout << "Lost." << endl;
+            cout << "Lost" << endl;
             return 0;
         }
         // check treasure
