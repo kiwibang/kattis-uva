@@ -6,7 +6,7 @@ int main() {
     while (cin >> n && n != 0) {
         int mx = -1;
         string res;
-        for (int j= 0; j < n; ++j) {
+        for (int j = 0; j < n; ++j) {
             string word;
             cin >> word;
             int count = 0;
