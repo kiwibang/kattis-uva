@@ -103,7 +103,7 @@ int main() {
                     }
                 }
                 // diagonal attacks
-                if (cc == 'b' || cc == 'B' || cc == 'r' || cc == 'R') {
+                if (cc == 'b' || cc == 'B' || cc == 'q' || cc == 'Q') {
                     int r = i - 1;
                     int c = j - 1;
                     while (r >= 0 && c >= 0) {
