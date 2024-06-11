@@ -37,7 +37,7 @@ int main() {
                 en = max(en, time[i].second);
                 ++i;
             }
-            if (time[i].first - en> last) {
+            if (time[i].first - en > last) {
                 st = en;
                 last = time[i].first - en;
             }
