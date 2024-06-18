@@ -56,6 +56,7 @@ int main() {
         while (iss >> cur) {
             p1 = stoi(cur.substr(0, cur.find(':')));
             p2 = stoi(cur.substr(cur.find(':') + 1, cur.size()));
+            ok = ok && (sc[0] < 2 && sc[1] < 2);
             ok = ok && check(p1, p2, id++, player1, player2, sc);
         }
         ok = ok && (sc[0] == 2 || sc[1] == 2);
