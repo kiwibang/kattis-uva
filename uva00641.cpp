@@ -35,16 +35,7 @@ int main() {
         vector<char> pt(n);
         // convert ciphercode into plaincode. note that 0th char in ciphercode always equals to 0th char of plaincode
         for (int i = 0; i < n; ++i) {
-            // get inner index
-            int innerindex = (k * i) % n;
-            for (int chr = 0;; ++chr) {
-                int a = ((chr - i) / 28) * 28 + code[i];
-                int b = chr - i;
-                if (a == b) {
-                    pt[innerindex] = decode(chr % 28);
-                    break;
-                }
-            }
+            pt[(k * i) % n] = decode((code[i] + i) % 28);
         }
         for (int i = 0; i < n; ++i) {
             cout << pt[i];
