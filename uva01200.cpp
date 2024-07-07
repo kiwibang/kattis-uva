@@ -57,7 +57,6 @@ int main() {
                 isplus = true;
             }
         }
-        // cout << lhsx << " " << lhsval << " " << rhsx << " " << rhsval << endl;
         // place the X'es on the left, and vals on the right
         // print the cases
         if (lhsx == rhsx && lhsval == rhsval) {
@@ -67,10 +66,6 @@ int main() {
         } else {
             cout << (int) floor((double) (rhsval - lhsval) / (lhsx - rhsx)) << endl;
         }
-        // for (int j = 0; j < expr.size(); ++j) {
-        //     cout << expr[j] << " ";
-        // }
-        // cout << endl;
     }
     return 0;
 }
