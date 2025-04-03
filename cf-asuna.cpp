@@ -1,41 +1,20 @@
-// this doesnt work lol
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int t;
+    //ios::sync_with_stdio(false);cin.tie(nullptr);
+    int t, n, numodd, num, mx;
+    long long s;
     cin >> t;
     while (t--) {
-        int n;
         cin >> n;
-        long long mnodd = LLONG_MAX, mneven = LLONG_MAX,  mx = LLONG_MIN;
-        long long sum = 0;
-        int numodd = 0, numeven = 0;
+        numodd = 0, s = 0, mx = INT_MIN;
         for (int i = 0; i < n; ++i) {
-            long long curr;
-            cin >> curr;
-            sum += curr,  mx = max(mx, curr);
-            if (curr & 1) {
-                ++numodd;
-                mnodd = min(mnodd, curr);
-            } else {
-                ++numeven;
-                mneven = min(mneven, curr);
-            } 
+            cin >> num;
+            if (num & 1) ++numodd;
+            s += num, mx = max(mx, num);
         }
-        if (numodd == 0 || numeven == 0) { // no transfers can be made
-            cout << mx << endl;
-        } else if (numodd == 1 && numeven == 1) {
-            cout << sum << endl;
-        } else { // transfers can be made
-            if (numodd < numeven) {
-                cout << sum - mnodd << endl;
-            } else if (numodd > numeven) {
-                cout << sum - mneven << endl;
-            } else {
-                cout << sum - min(mnodd, mneven) << endl;
-            }
-        }
+        cout << (numodd == n || !numodd ? mx : s - numodd + 1) << "\n";
     }
     return 0;
 }
